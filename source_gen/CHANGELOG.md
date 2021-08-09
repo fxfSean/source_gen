@@ -1,3 +1,9 @@
+## 1.0.6
+
+* Enable all style fixes when formatting Dart code.
+  * Individual builders can opt out of this by providing a custom `formatOutput`
+    function to the `PartBuilder` or `LibraryBuilder` constructors.
+
 ## 1.0.5
 
 * Fix a bug with reviving constant expressions which are fields defined on a
