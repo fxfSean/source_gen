@@ -364,7 +364,7 @@ Future<bool> _hasAnyTopLevelAnnotations(
   return false;
 }
 
-final _formatter = DartFormatter(fixes: StyleFix.all);
+final _formatter = DartFormatter(fixes: [StyleFix.singleCascadeStatements]);
 
 const defaultFileHeader = '// GENERATED CODE - DO NOT MODIFY BY HAND';
 
