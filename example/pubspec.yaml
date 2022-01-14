@@ -7,6 +7,13 @@ dependencies:
   analyzer: '>=2.1.0 <4.0.0'
   build: ^2.0.0
   source_gen: any
+  build_runner: ^2.0.0
+  dio: ^4.0.1
+  built_collection: ^5.0.0
+  code_builder: ^4.0.0
+  tuple: ^2.0.0
+  retrofit: ^3.0.1
+  dart_style: ^2.0.1
 
 dependency_overrides:
   source_gen:

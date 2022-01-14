@@ -6,6 +6,8 @@ environment:
 dependencies:
   source_gen_example:
     path: ../example
+  retrofit: ^3.0.1
+
 
 dev_dependencies:
   build_runner: ^2.0.0

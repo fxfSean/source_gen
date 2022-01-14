@@ -14,7 +14,6 @@ library source_gen_example.builder;
 
 import 'package:build/build.dart';
 import 'package:source_gen/source_gen.dart';
-
 import 'src/member_count_library_generator.dart';
 import 'src/multiplier_generator.dart';
 import 'src/property_product_generator.dart';

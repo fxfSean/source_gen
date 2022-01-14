@@ -14,6 +14,13 @@ targets:
       source_gen_example|property_product:
         generate_for:
           - lib/*.dart
+      source_gen_example|property_service:
+        generate_for:
+          - lib/traffic/repo*.dart
+      source_gen_example|retrofit:
+        generate_for:
+          - lib/traffic/retrofit.dart
+
       # The end-user of a builder which applies "source_gen|combining_builder"
       # may configure the builder to ignore specific lints for their project
       source_gen|combining_builder:

@@ -1,0 +1,4 @@
+
+class ServiceUseCase {
+  const ServiceUseCase();
+}

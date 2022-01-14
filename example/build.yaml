@@ -13,6 +13,23 @@ builders:
     # Generate the output directly into the package, not to a hidden cache dir
     build_to: source
 
+
+  property_service:
+    import: "package:source_gen_example/service/service_builder.dart"
+    builder_factories: [ "serviceBuilder" ]
+    build_extensions: { ".dart": [ ".usecase.part" ] }
+    auto_apply: dependents
+    build_to: source
+
+  retrofit:
+    target: ":retrofit"
+    import: "package:source_gen_example/service/retrofit_generator.dart"
+    builder_factories: [ "retrofitBuilder" ]
+    build_extensions: { ".dart": [ ".retrofit.g.part" ] }
+    auto_apply: dependents
+    build_to: cache
+    applies_builders: [ "source_gen|combining_builder" ]
+
   # The next three builders are `SharedPartBuilder` instances.
   # Notice they each have
   # `build_extensions` set to a `NAME.g.part` file.
@@ -30,13 +47,13 @@ builders:
     build_to: cache
     applies_builders: ["source_gen|combining_builder"]
 
-  property_sum:
-    import: "package:source_gen_example/builder.dart"
-    builder_factories: ["sumBuilder"]
-    build_extensions: {".dart": ["sum.g.part"]}
-    auto_apply: dependents
-    build_to: cache
-    applies_builders: ["source_gen|combining_builder"]
+#  property_sum:
+#    import: "package:source_gen_example/builder.dart"
+#    builder_factories: ["sumBuilder"]
+#    build_extensions: {".dart": ["sum.g.part"]}
+#    auto_apply: dependents
+#    build_to: cache
+#    applies_builders: ["source_gen|combining_builder"]
 
   property_multiply:
     import: "package:source_gen_example/builder.dart"
@@ -45,3 +62,5 @@ builders:
     auto_apply: dependents
     build_to: cache
     applies_builders: ["source_gen|combining_builder"]
+
+
